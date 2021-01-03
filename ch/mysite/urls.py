@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('user/', include('gsm.urls'))
+    # 127.0.0.1:8000/user/ 이하의 url들은 gsm폴더의 urls에서 관리한다 라고 하는 것.
+
 ]

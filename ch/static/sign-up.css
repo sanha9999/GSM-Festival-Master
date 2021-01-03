@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+
+body{
+	background-image: url("https://images.pexels.com/photos/891252/pexels-photo-891252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-position: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+	min-height:100vh;
+	font-family: 'Noto Sans', sans-serif;
+}
+.box{
+	position:absolute;
+	left:50%;
+	top:65%;
+	transform: translate(-50%,-50%);
+	border-radius:3px;
+	padding:70px 100px;
+	z-index: 1;
+}
+.input-container{
+	position:relative;
+	margin-bottom:35px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:20px;
+	color:#fff;	
+    pointer-event:none;
+	transition: all 0.5s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:10px 0 5px 0;
+  font-size:13px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #2EE59D;	
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:16px;
+}
+.login-ico{
+	width: 200px;
+	height: 200px;
+}
+.ID{
+	width: 20px;
+	height: 20px;
+}
+.PW{
+	width: 20px;
+	height: 20px;
+}
+.signup-name{
+	width: 20px;
+	height: 20px;
+}
+.main-motion-container{
+	position: absolute;
+	top: 25%;
+	left: 0%;
+	color: #ffffff;
+}
+.main{
+	margin-right: 170px;
+}
+.login-btn {
+	width: 170px;
+	height: 45px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: #000;
+	background-color: #fff;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	margin-top: 60px;
+	}
+  
+  .login-btn:hover {
+	background-color: #2EE59D;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: #fff;
+	transform: translateY(-7px);
+  }

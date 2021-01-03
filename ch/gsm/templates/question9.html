@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 뭐 볼까?</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="node_modules/animate.css/source/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+        <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+        <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+        body {
+            font-family: "Do Hyeon", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="background">
+            <img src="images/bg.jpg" alt="">
+        </div>
+    </div>
+    <header>
+        <a href="main.html">
+            <h1>
+                <span class="team" style="color: powderblue">MOVIE</span>
+                <span class="team-name">오늘 뭐 볼까?</span>
+            </h1>
+        </a>
+        <div class="question-gage-container">
+            <div class="question-gage">
+                <div class="question-gage-bar-9"></div>
+            </div>
+        </div>
+    </header>
+    <div class="main-container main-inner">
+        <div class="animated fadeOutLeft main-container-inner">
+            <div class="step-main step-container">
+                <div class="section-inner">
+                    <div class="mbti-container">
+                        <div class="question-ico">
+                            <img src="images/color.png" alt="" class="img">
+                        </div>
+                        <div class="question">Q.다음 중 제일 좋아하는 색은?</div>
+                        <ul class="answer-container">
+                            <a href=""><li class="answer">빨강 또는 오렌지</li></a>
+                            <a href=""><li class="answer">검은색</li></a>
+                            <a href=""><li class="answer">노랑 또는 연한 파랑</li></a>
+                            <a href=""><li class="answer">녹색</li></a>
+                            <a href=""><li class="answer">흰색</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step-intro step-container">
+                <div class="section-inner">
+                    <div class="mbti-container">
+                        <div class="question-ico">
+                            <img src="images/sleep.png" alt="" class="img">
+                        </div>
+                        <div class="question">Q.잠자리에 들어서 잠들기 전의 나는?</div>
+                        <ul class="answer-container">
+                            <a href="question10.html"><li class="answer">몸을 똑바로 펴고 눕는다.</li></a>
+                            <a href="question10.html"><li class="answer">엎드린채로 몸을 쯕 펴고 눕는다.</li></a>
+                            <a href="question10.html"><li class="answer">몸을 둥글게 만채로 옆으로 눕는다.</li></a>
+                            <a href="question10.html"><li class="answer">한팔을 베고 눕는다.</li></a>
+                            <a href="question10.html"><li class="answer">머리를 이불 밑에 넣고 눕는다.</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 뭐 볼까?</title>
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="node_modules/animate.css/source/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+        <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+        <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+        body {
+            font-family: "Do Hyeon", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="background">
+            <img src="images/bg.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="main-container main-inner">
+        <div class="main-container-inner">
+            <div class="step-intro step-container">
+                <div class="section-inner">
+                    <div class="mbti-container">
+                        <div class="main-motion-container">
+                            <h3 style="opacity: 1; transform: translate(0px, 0px);
+                                        font-family: 'Meddon', cursive;">
+                                Recommending Moives
+                            </h3>
+                            <p style="opacity: 1; transform: translate(0px, 0px)">
+                                Through Pesonality Tests
+                            </p>
+                        </div>
+                        <div class="question-ico">
+                            <img src="images/result.png" alt="">
+                        </div>
+                        <div class="result-desc-container">
+                            <div class="question">
+                                ~하고 ~한 당신은<br>"~하는"성격을 가진 사람!
+                            </div>
+                            <ul class="result-desc">
+                                <li class="result-ex">*검사 결과 풀이1</li>
+                                <li class="result-ex">*검사 결과 풀이2</li>
+                                <li class="result-ex">*검사 결과 풀이3</li>
+                                <li class="result-ex">*검사 결과 풀이4</li>
+                                <li class="result-ex">*검사 결과 풀이5</li>
+                            </ul>
+                            <img src="images/moive3.png" alt="" class="movie-image">
+                            <img src="images/moive3.png" alt="" class="movie-image">
+                            <div class="movie-ex">
+                                <div class="movie-rcmd">
+                                    <div class="line"></div>
+                                    <div class="rcmd-desc">
+                                        <div style="margin-top: 30px;">
+                                            <span style="color: #b0e0e6; font-size: 24px; margin-left: 20px;">
+                                                당신의 취향에 맞는 영화
+                                            </span><br>
+                                            <span style="color: #ffffff; font-size: 18px; margin-left: 20px;">ex)백두산,베놈,알라딘</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-not-rcmd">
+                                    <div class="line2"></div>
+                                    <div class="rcmd-desc">
+                                        <div style="margin-top: px;">
+                                            <span style="color: lightpink; font-size: 24px; margin-left: 44px;">
+                                                당신의 취향과는 상극인 영화
+                                            </span><br>
+                                            <span style="color: #ffffff; font-size: 18px; margin-left: 44px;">ex)장난스러운 키스,키싱부스</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="main.html">
+                                    <button class="restart-btn" style="opacity: 1; transform: translate(0px, 0px)">
+                                        다시하기
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+header {
+    position: absolute;
+    display: block;
+    font-size: 0;
+    z-index: 2;
+    top: 40px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}
+header h1 {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+header .team:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.26);
+    vertical-align: middle;
+    margin: 2px 8px 0 15px;
+}
+
+header .team-name {
+    display: inline-block;
+    font-family: 'NanumMyeongjo';
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    color: #a8a8a8;
+    margin-top: -1px;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.main{
+    margin-left: 170px;
+}
+.image-movie-ico{
+    width: 30px;
+    image-rendering: -webkit-optimize-contrast;
+}
+.background-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+.background{
+    height: 100%;
+}
+.background img{
+    height: 100%;
+    margin-left:100vw;
+    transform: translateX(-100%);
+}
+.background-gradation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 243px;
+    opacity: 0.4;
+    background: linear-gradient(rgba(57, 57, 57, 0), rgba(0, 0, 0, 1));
+}
+.main-container{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 600px;
+    height: 100%;
+    height: 100vh;
+    height: calc(var(--vh,1vh) * 100);
+}
+.main-motion-container{
+    width: 100%;
+}
+.main-container-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.step-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+.section-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 18px;
+    box-sizing: border-box;
+}
+.step-main {
+    text-align: center;
+    color: #a8a8a8;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.step-main h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 50px;
+    letter-spacing: -1.5px;
+    padding: 20px 0 20px;
+    color: #ffffff;
+}
+.step-intro h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 50px;
+    letter-spacing: -1.5px;
+    padding: 20px 0 20px;
+    color: #ffffff;
+}
+.step-main h3 span {
+    color: #b0e0e6;
+}
+.step-main p {
+    color: #7e7e7e;
+    padding-bottom: 50px;
+}
+.step-intro p {
+    color: #7e7e7e;
+    padding-bottom: 50px;
+}
+.start-btn{
+    width: 70%;
+    background:#96d9e2;
+    color:#fff;
+    position:relative;
+    height:66px;
+    font-size:18px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    margin-bottom: 40px;
+    margin-top: 20%;
+}
+.start-btn:hover{
+    background:#fff;
+    color:#96d9e2;
+}
+.start-btn:before,.start-btn:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #96d9e2;
+    transition:400ms ease all;
+}
+.start-btn:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.start-btn:hover:before,.start-btn:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+.mbti-container{
+    text-align: center;
+    height: 80%;
+}
+.mbti{
+    font-family: 'NanumMyeongjo';
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: -1px;
+    padding: 20px 0;
+}
+.question-gage-container{
+    margin: 20px auto 0;
+    width: 190px;
+}
+.question-gage{
+    width: 190px;
+    height: 2px;
+    background-color: #444444;
+    overflow: hidden;
+}
+.question-gage-bar{
+    width: 19px;
+    display: block;
+    height: 2px;
+    background-color: #b0e0e6;
+}
+
+.question-head{
+    font-size: 2rem;
+    font-family: 'Meddon', cursive;
+    margin-top: 5%;
+}
+.question{
+    margin: 30px 30px 30px 30px;
+    font-size: 30px;
+    color: #ffffff;
+}
+.desc{
+    line-height: 150%;
+}
+.desc-color{
+    color: lightpink;
+}
+.sign{
+    float: right;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #a8a8a8;
+}
+.sign-in{
+    padding: 15px;
+}
+.sign-up{
+    padding-right: 30px;
+}
