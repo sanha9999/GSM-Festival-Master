@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 뭐 볼까?</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+        body {
+            font-family: "Do Hyeon", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="background">
+            <img src="images/bg.jpg" alt="">
+        </div>
+    </div>
+    <header>
+        <h1>
+            <div class="board">
+                <a href="board.html">자유게시판</a>
+            </div>
+            <a href="main.html" class="main">
+                <span class=" team" style="color: powderblue">MOVIE</span>
+                <span class="team-name">오늘 뭐 볼까?</span>
+            </a>
+            <div class="sign">
+                <a href="main.html" class="sign-in">LOG OUT</a>
+            </div>
+        </h1>
+    </header>
+    <div class="main-container main-inner">
+        <div class="main-container-inner">
+            <div class="step-main step-container">
+                <div class="section-inner">
+                    <span class="ico-movie" style="opacity: 1; transform: translate(0px, 0px)">
+                        <img src="images/movie.png" alt="" class="image-movie-ico" />
+                    </span>
+                    <div class="main-motion-container">
+                        <h3 style="opacity: 1; transform: translate(0px, 0px);
+                                    font-family: 'Meddon', cursive;">
+                            Recommending Moives
+                        </h3>
+                        <p style="opacity: 1; transform: translate(0px, 0px)">
+                            Through Pesonality Tests
+                        </p>
+                        <a href="question.html">
+                            <button class="start-btn" style="opacity: 1; transform: translate(0px, 0px)">
+                                시작하기
+                            </button>
+                        </a>
+                    </div>
+                    <div class="desc" style="font-family: 'Song Myung', serif; font-size: 20px;">
+                        간단한 몇 가지의 질문으로<br>
+                        <span class="desc-color">당신의 성격을 파악</span>하고<br>
+                        그에 맞는 <span class="desc-color">영화를 추천</span>해줍니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

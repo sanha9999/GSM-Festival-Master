@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 뭐 볼까?</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sign-in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+        <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+        <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+        body {
+            font-family: "Do Hyeon", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="background">
+            <img src="images/bg.jpg" alt="">
+        </div>
+    </div>
+    <header>
+        <h1>
+            <a href="main.html" class="main" data-transition="fade">
+                <span class=" team" style="color: #93f5ce;">MOVIE</span>
+                <span class="team-name">오늘 뭐 볼까?</span>
+            </a>
+        </h1>
+    </header>
+    <div class="main-container main-inner">
+        <div class="main-container-inner">
+            <div class="step-main step-container">
+                <div class="section-inner">
+                    <div class="main-motion-container">
+                        <!-- <span class="ico-movie" style="opacity: 1; transform: translate(0px, 0px)">
+                            <img src="images/movie.png" alt="" class="image-movie-ico" />
+                        </span> -->
+                        <h3 style="opacity: 1; transform: translate(0px, 0px);
+                                    font-family: 'Meddon', cursive;">
+                            Recommending Moives
+                        </h3>
+                        <p style="opacity: 1; transform: translate(0px, 0px)">
+                            Through Pesonality Tests
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box" style="font-family: 'Roboto', sans-serif;">
+    <form>
+        <div class="input-container">
+            <input type="text" required=""/>
+            <label><img src="images/id.png" alt="" class="ID"> ID</label>		
+        </div>
+        <div class="input-container">		
+            <input type="password" required=""/>
+            <label><img src="images/pw.png" alt="" class="PW"> PW</label>
+        </div>
+            <a href="main.html"><button type="button" class="login-btn" data-transition="fade">LOG in</button></a>
+            <a href="sign-up.html"><button type="button" class="login-btn">Sign Up</button></a>
+    </form>	
+    </div>
+</body>
+</html>

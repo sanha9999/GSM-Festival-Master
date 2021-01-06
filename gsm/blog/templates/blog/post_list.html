@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <button type="button" class="btn btn-sm btn-outline-warning float-right" onclick="location.href='/blog/create/'">New Post</button>
+{% endif %}
+
+<h1 id="blog-list-title">
+    자유게시판
+    {% if category %}<small class="text-muted"> : {{ category }}</small>{% endif %}
+    {% if tag %}<small class="text-muted"> : #{{ tag }}</small>{% endif %}
+</h1>
+{% if object_list.exists %}
+{% for p in object_list %}
+<!-- Blog Post -->
+<div class="card mb-4" id="post-card-{{ p.pk }}">
+    {% if p.head_image %}
+    <img class="card-img-top" src="{{ p.head_image.url }}" alt="Card image cap">
+    {% else %}
+    <img class="card-img-top" src="https://picsum.photos/700/300/?random" alt="Card image cap">
+    {% endif %}
+
+    <div class="card-body">
+        {% if p.category %}
+        <span class="badge rounded-pill bg-warning text-dark float-right">{{ p.category }}</span>
+        {% else %}
+        <span class="badge rounded-pill bg-secondary float-right">미분류</span>
+        {% endif %}
+        <h2 class="card-title">{{ p.title }}</h2>
+        <p class="card-text">{{ p.content | truncatewords:50 }}</p>
+
+        {% for tag in p.tags.all %}
+        <a href="{{ tag.get_absolute_url }}">#{{ tag }} </a>
+        {% endfor %}
+        <br/>
+        <br/>
+
+        <a href="{{ p.get_absolute_url }}" class="btn btn-primary" id="read-more-post-{{ p.pk }}">Read More &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+        Posted on {{ p.created }} by
+        <a href="#">{{ p.author }}</a>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<h3>아직 게시물이 없습니다.</h3>
+{% endif %}
+{% endblock %}

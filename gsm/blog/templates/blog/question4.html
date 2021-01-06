@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 뭐 볼까?</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="node_modules/animate.css/source/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+        <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+        <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+        body {
+            font-family: "Do Hyeon", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="background">
+            <img src="images/bg.jpg" alt="">
+        </div>
+    </div>
+    <header>
+        <a href="main.html">
+            <h1>
+                <span class="team" style="color: powderblue">MOVIE</span>
+                <span class="team-name">오늘 뭐 볼까?</span>
+            </h1>
+        </a>
+        <div class="question-gage-container">
+            <div class="question-gage">
+                <div class="question-gage-bar-4"></div>
+            </div>
+        </div>
+    </header>
+    <div class="main-container main-inner">
+        <div class="animated fadeOutLeft main-container-inner">
+            <div class="step-main step-container">
+                <div class="section-inner">
+                    <div class="mbti-container">
+                        <div class="question-ico">
+                            <img src="images/talk.png" alt="" class="img">
+                        </div>
+                        <div class="question">Q.사람들과 얘기 할 때 나는?</div>
+                        <ul class="answer-container">
+                            <a href=""><li class="answer">내 팔짱을 끼고 서서</li></a>
+                            <a href=""><li class="answer">두 손을 마주잡고</li></a>
+                            <a href=""><li class="answer">한 손이나 양손을 허리에 얹고</li></a>
+                            <a href=""><li class="answer">귀,턱,머리 등을 만지자거리며</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step-intro step-container">
+                <div class="section-inner">
+                    <div class="mbti-container">
+                        <div class="question-ico">
+                            <img src="images/rest.png" alt="" class="img">
+                        </div>
+                        <div class="question">Q.편안히 쉴 때 나는?</div>
+                        <ul class="answer-container">
+                            <a href="question5.html"><li class="answer">다리를 굽힌채로 나란히 두고 앉는다.</li></a>
+                            <a href="question5.html"><li class="answer">다리를 꼬고 앉는다.</li></a>
+                            <a href="question5.html"><li class="answer">다리를 쭉 펴고 앉는다.</li></a>
+                            <a href="question5.html"><li class="answer">한 쪽 다리를 접어서 깔고 앉는다.</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
