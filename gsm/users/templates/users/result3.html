@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 뭐 볼까?</title>
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="node_modules/animate.css/source/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+        <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+        <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+        body {
+            font-family: "Do Hyeon", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="background">
+            <img src="images/bg.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="main-container main-inner">
+        <div class="main-container-inner">
+            <div class="step-intro step-container">
+                <div class="section-inner">
+                    <div class="mbti-container">
+                        <div class="main-motion-container">
+                            <h3 style="opacity: 1; transform: translate(0px, 0px);
+                                        font-family: 'Meddon', cursive;">
+                                Recommending Moives
+                            </h3>
+                            <p style="opacity: 1; transform: translate(0px, 0px)">
+                                Through Pesonality Tests
+                            </p>
+                        </div>
+                        <div class="question-ico">
+                            <img src="images/result3.png" alt="" class="result-img">
+                        </div>
+                        <div class="result-desc-container">
+                            <div class="question" style="width: 100%;">
+                                당신은 <span style="color: lightblue;">현명</span>하고 <span style="color: lightgreen;">신중</span>하며<br><span style="color: lightblue;">재능</span>과 <span style="color: lightgreen;">능력</span> <span style="color: lightskyblue;">겸손</span>마저 갖춘 사람!
+                            </div>
+                            <ul class="result-desc">
+                                <li class="result-ex">친구를 사귈 때 가볍게 접근하지않으며</li>
+                                <li class="result-ex">한번 사귄 친구에게는 매우 잘해줍니다.</li>
+                                <li class="result-ex">그리고 자신에게도 그렇게 대해주길 바랍니다.</li>
+                                <li class="result-ex">당신은 우정에서 <span style="color: lightblue;">신뢰도</span>를 </li>
+                                <li class="result-ex">매우 중요시하는 사람입니다.</li>
+                            </ul>
+                            <img src="images/moive3.png" alt="" class="movie-image">
+                            <img src="images/moive3.png" alt="" class="movie-image">
+                            <div class="movie-ex">
+                                <div class="movie-rcmd">
+                                    <div class="line"></div>
+                                    <div class="rcmd-desc">
+                                        <div style="margin-top: 30px;">
+                                            <span style="color: #b0e0e6; font-size: 24px; margin-left: 20px;">
+                                                당신의 취향에 맞는 영화
+                                            </span><br>
+                                            <span style="color: #ffffff; font-size: 18px; margin-left: 20px;">라라랜드, 내부자들, 마션, 이터널 션샤인</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-not-rcmd">
+                                    <div class="line2"></div>
+                                    <div class="rcmd-desc">
+                                        <div style="margin-top: px;">
+                                            <span style="color: lightpink; font-size: 24px; margin-left: 44px;">
+                                                당신의 취향과는 상극인 영화
+                                            </span><br>
+                                            <span style="color: #ffffff; font-size: 18px; margin-left: 44px;">모아나, 나의 소녀시대, 곡성</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="index.html">
+                                    <button class="restart-btn" style="opacity: 1; transform: translate(0px, 0px)">
+                                        다시하기
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

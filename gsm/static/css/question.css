@@ -1,4 +1,4 @@
-.answer {
+#answer {
   display: inline-block;
   line-height: 70px;
   width: 350px;
@@ -16,9 +16,10 @@
   cursor: pointer;
   outline: none;
   border: 1px solid ;
+  background: none;
   }
 
-.answer:hover {
+#answer:hover {
   background-color: #96d9e2;
   box-shadow: 0px 15px 20px rgba(46, 186, 229, 0.4);
   color: #fff;

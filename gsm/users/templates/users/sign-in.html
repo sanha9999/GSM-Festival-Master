@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오늘 뭐 볼까?</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/sign-up.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sign-in.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
         crossorigin="anonymous" />
@@ -30,7 +30,7 @@
     </div>
     <header>
         <h1>
-            <a href="{% url 'main' %}" class="main">
+            <a href="{% url 'main' %}" class="main" data-transition="fade">
                 <span class=" team" style="color: #93f5ce;">MOVIE</span>
                 <span class="team-name">오늘 뭐 볼까?</span>
             </a>
@@ -57,27 +57,19 @@
         </div>
     </div>
     <div class="box" style="font-family: 'Roboto', sans-serif;">
-        <form action="" method="POST">
-            {% csrf_token %}
-            <div class="input-container">		
-                <input type="text" required="" name="name"/>
-                <label><img src="{% static "images/name.png" %}" alt="" class="signup-name"> Name</label>
-            </div>
-            <div class="input-container">
-                <input type="text" required="" name="username"/>
-                <label><img src="{% static "images/ID.png" %}" alt="" class="ID"> ID</label>		
-            </div>
-            <div class="input-container">		
-                <input type="password" required="" name="password"/>
-                <label><img src="{% static "images/PW.png" %}" alt="" class="PW"> PW</label>
-            </div>
-            <div class="input-container">		
-                <input type="password" required="" name="confirm"/>
-                <label><img src="{% static "images/pwcheck.png" %}" alt="" class="PW"> Confirm</label>
-            </div>
-                <a href="{% url 'sign_in' %}"><button type="button" class="login-btn">Back to Log In</button></a>
-                <input type="submit" value="회원 가입" class="login-btn">
-        </form>	
-    </div> 
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="input-container">
+            <input type="text" required=""/ name="username">
+            <label><img src="{% static "images/ID.png" %}" alt="" class="ID"> ID</label>		
+        </div>
+        <div class="input-container">		
+            <input type="password" required=""/ name="password">
+            <label><img src="{% static "images/PW.png" %}" alt="" class="PW"> PW</label>
+        </div>
+            <input type="submit" value="LOG in" class="login-btn">
+            <a href="{% url 'sign_up' %}"><button type="button" class="login-btn">Sign Up</button></a>
+    </form>	
+    </div>
 </body>
 </html>

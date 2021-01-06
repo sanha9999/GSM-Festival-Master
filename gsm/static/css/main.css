@@ -36,8 +36,12 @@ a{
     text-decoration: none;
     color: #ffffff;
 }
+button{
+    text-decoration: none;
+    color: #ffffff;
+}
 .main{
-    margin-left: 170px;
+    margin-left: 100px;
 }
 .image-movie-ico{
     width: 30px;
@@ -214,7 +218,7 @@ a{
 }
 .question{
     margin: 30px 30px 30px 30px;
-    font-size: 30px;
+    font-size: 20px;
     color: #ffffff;
 }
 .desc{
@@ -235,4 +239,11 @@ a{
 }
 .sign-up{
     padding-right: 30px;
+}
+.board{
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: #a8a8a8;
+    padding-left: 20px;
 }
