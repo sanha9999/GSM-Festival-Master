@@ -1,2 +1,3 @@
 # GSM_project
 GSMproject.....backend.....Django...
+cmder 실행 후 runserver돌려야 합니다.
