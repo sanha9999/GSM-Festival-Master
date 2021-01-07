@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오늘 뭐 볼까?</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/question.css">
-    <link rel="stylesheet" href="node_modules/animate.css/source/animate.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/question.css' %}">
+    <link rel="stylesheet" href="{% static 'css/node_modules/animate.css/source/animate.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
         crossorigin="anonymous" />
@@ -26,12 +27,12 @@
 <body>
     <div class="background-container">
         <div class="background">
-            <img src="images/bg.jpg" alt="">
+            <img src="{% static "images/bg.jpg" %}" alt="">
         </div>
     </div>
     <h1 id="coinAm" class="num"> 0 </h1>
     <header>
-        <a href="main.html">
+        <a href="{% url 'main' %}">
             <h1>
                 <span class="team" style="color: powderblue">MOVIE</span>
                 <span class="team-name">오늘 뭐 볼까?</span>
@@ -48,7 +49,7 @@
             <div class="step-main step-container">
                 <div class="section-inner">
                     <span class="ico-movie" style="opacity: 1; transform: translate(0px, 0px)">
-                        <img src="images/movie.png" alt="" class="image-movie-ico" />
+                        <img src="{% static "images/movie.png" %}" alt="" class="image-movie-ico" />
                     </span>
                     <div class="main-motion-container">
                         <h3 style="opacity: 1; transform: translate(0px, 0px);
@@ -58,7 +59,7 @@
                         <p style="opacity: 1; transform: translate(0px, 0px)">
                             Through Pesonality Tests
                         </p>
-                        <a href="question.html">
+                        <a href="{% url 'question' %}">
                             <button class="start-btn" style="opacity: 1; transform: translate(0px, 0px)">
                                 시작하기
                             </button>
@@ -75,21 +76,21 @@
                 <div class="section-inner">
                     <div class="mbti-container">
                         <div class="question-ico">
-                            <img src="images/question.png" alt="">
+                            <img src="{% static "images/question.png" %}" alt="">
                         </div>
                         <div class="question">Q.하루중 기분이 좋을때는?</div>
                         <ul class="answer-container">
-                            <a href="question2.html" onclick="coin();"><li id="answer">새벽</li></a>
-                            <a href="question2.html" onclick="coin2();"><li id="answer">아침</li></a>
-                            <a href="question2.html" onclick="coin4();"><li id="answer">오후 또는 이른저녁</li></a>
-                            <a href="question2.html" onclick="coin6();"><li id="answer">늦은 밤</li></a>
+                            <a href="{% url 'question2' %}" onclick="coin();"><li id="answer">새벽</li></a>
+                            <a href="{% url 'question2' %}" onclick="coin2();"><li id="answer">아침</li></a>
+                            <a href="{% url 'question2' %}" onclick="coin4();"><li id="answer">오후 또는 이른저녁</li></a>
+                            <a href="{% url 'question2' %}" onclick="coin6();"><li id="answer">늦은 밤</li></a>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>

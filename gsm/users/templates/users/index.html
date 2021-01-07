@@ -31,7 +31,7 @@
     <header>
         <h1>
             <div class="board">
-                <a href="{% url 'blog/blog' %}">자유게시판</a>
+                <a href="{% url 'blog' %}">자유게시판</a>
             </div>
             <a href="{% url 'main' %}" class="main">
                 <span class=" team" style="color: powderblue">MOVIE</span>
@@ -57,7 +57,7 @@
                         <p style="opacity: 1; transform: translate(0px, 0px)">
                             Through Pesonality Tests
                         </p>
-                        <a href="question.html">
+                        <a href="{% url 'question' %}">
                             <button class="start-btn" style="opacity: 1; transform: translate(0px, 0px)">
                                 시작하기
                             </button>
@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 

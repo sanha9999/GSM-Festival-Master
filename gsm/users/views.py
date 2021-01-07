@@ -1,3 +1,5 @@
+import random
+
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .models import User
@@ -6,20 +8,59 @@ from .forms import CommentForm
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
+
 # Create your views here.
+def question_view(request):
+    return render(request, "users/question.html")
+
+def question_view2(request):
+    return render(request, "users/question2.html")
+
+def question_view3(request):
+    return render(request, "users/question3.html")
+
+def question_view4(request):
+    return render(request, "users/question4.html")
+
+def question_view5(request):
+    return render(request, "users/question5.html")
+
+def question_view6(request):
+    return render(request, "users/question6.html")
+
+def question_view7(request):
+    return render(request, "users/question7.html")
+
+def question_view8(request):
+    return render(request, "users/question8.html")
+def question_view9(request):
+    return render(request, "users/question9.html")
+def question_view10(request):
+    if request.method == "POST":
+        number = random.randrange(1, 6)
+        if number == 1:
+            return redirect('result1')
+        elif number == 2:
+            return redirect('result2')
+        elif number == 3:
+            return redirect('result3')
+        elif number == 4:
+            return redirect('result4')
+        else:
+            return redirect('result5')
+    return render(request, "users/question10.html")
 
 def sign_up_view(request):
     if request.method == "POST":
-        print(request.POST)
-        name = request.POST.get('name', '')
-        username = request.POST.get('username', '')
-        password = request.POST.get('password', '')
-        confirm = request.POST.get('confirm', '')
 
-        user = User.objects.create_user(username, password, confirm)
-        user.name = name
+        username = request.POST["username"]
+        password = request.POST["password"]
+        email = request.POST["name"]
+
+        user = User.objects.create_user(username, email,  password)
         user.save()
-        return redirect('sign_in')
+        return redirect("sign_in")
     return render(request, "users/sign-up.html")
 
 def main_view(request):
@@ -36,8 +77,24 @@ def sign_in_view(request):
             return render(request, "users/index.html")
         else:
             print("인증 실패")
+
     return render(request, "users/sign-in.html")
 
+
+def result_view(request):
+    return render(request, "users/result.html")
+
+def result_view2(request):
+    return render(request, "users/result2.html")
+
+def result_view3(request):
+    return render(request, "users/result3.html")
+
+def result_view4(request):
+    return render(request, "users/result4.html")
+
+def result_view5(request):
+    return render(request, "users/result5.html")
 
 def logout_view(request):
     logout(request)
@@ -150,3 +207,32 @@ def new_comment(request, pk):
             return redirect(comment.get_absolute_url())
     else:
         return redirect('/blog/')
+
+
+class PostListByCategory(ListView):
+
+    def get_queryset(self):
+        slug = self.kwargs['slug']
+
+        if slug == '_none':
+            category = None
+        else:
+            category = Category.objects.get(slug=slug)
+
+        return Post.objects.filter(category=category).order_by('-created')
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(type(self), self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        context['posts_without_category'] = Post.objects.filter(category=None).count()
+
+        slug = self.kwargs['slug']
+
+        if slug == '_none':
+            context['category'] = '미분류'
+        else:
+            category = Category.objects.get(slug=slug)
+            context['category'] = category
+
+        # context['title'] = 'Blog - {}'.format(category.name)
+        return context

@@ -57,14 +57,17 @@
         </div>
     </div>
     <div class="box" style="font-family: 'Roboto', sans-serif;">
+    {% if error %}
+    
+    {% endif %}
     <form action="" method="POST">
         {% csrf_token %}
         <div class="input-container">
-            <input type="text" required=""/ name="username">
+            <input type="text" required="" name="username"/>
             <label><img src="{% static "images/ID.png" %}" alt="" class="ID"> ID</label>		
         </div>
         <div class="input-container">		
-            <input type="password" required=""/ name="password">
+            <input type="password" required="" name="password"/>
             <label><img src="{% static "images/PW.png" %}" alt="" class="PW"> PW</label>
         </div>
             <input type="submit" value="LOG in" class="login-btn">

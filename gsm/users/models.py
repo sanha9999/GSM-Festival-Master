@@ -8,6 +8,7 @@ from markdownx.utils import markdown
 
 class User(AbstractUser):
     name = models.CharField(max_length=60)
+    jum = models.IntegerField(default=0)
 
 
 class Category(models.Model):

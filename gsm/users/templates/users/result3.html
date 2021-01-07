@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오늘 뭐 볼까?</title>
-    <link rel="stylesheet" href="css/result.css">
-    <link rel="stylesheet" href="css/question.css">
-    <link rel="stylesheet" href="node_modules/animate.css/source/animate.css">
+    <link rel="stylesheet" href="{% static 'css/result.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/question.css' %}">
+    <link rel="stylesheet" href="{% static 'css/node_modules/animate.css/source/animate.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
         crossorigin="anonymous" />
@@ -26,10 +27,9 @@
 <body>
     <div class="background-container">
         <div class="background">
-            <img src="images/bg.jpg" alt="">
+            <img src="{% static "images/bg.jpg" %}" alt="">
         </div>
     </div>
-
     <div class="main-container main-inner">
         <div class="main-container-inner">
             <div class="step-intro step-container">
@@ -45,7 +45,7 @@
                             </p>
                         </div>
                         <div class="question-ico">
-                            <img src="images/result3.png" alt="" class="result-img">
+                            <img src="{% static "images/result3.png" %}" alt="" class="result-img">
                         </div>
                         <div class="result-desc-container">
                             <div class="question" style="width: 100%;">
@@ -58,8 +58,8 @@
                                 <li class="result-ex">당신은 우정에서 <span style="color: lightblue;">신뢰도</span>를 </li>
                                 <li class="result-ex">매우 중요시하는 사람입니다.</li>
                             </ul>
-                            <img src="images/moive3.png" alt="" class="movie-image">
-                            <img src="images/moive3.png" alt="" class="movie-image">
+                            <img src="{% static "images/moive3.png" %}" alt="" class="movie-image">
+                            <img src="{% static "images/moive3.png" %}" alt="" class="movie-image">
                             <div class="movie-ex">
                                 <div class="movie-rcmd">
                                     <div class="line"></div>
@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="index.html">
+                                <a href="{% url 'main' %}">
                                     <button class="restart-btn" style="opacity: 1; transform: translate(0px, 0px)">
                                         다시하기
                                     </button>
@@ -96,7 +96,7 @@
         </div>
     </div>
     
-    <script src="./main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
