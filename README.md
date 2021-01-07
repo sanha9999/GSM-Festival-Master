@@ -1,3 +1,2 @@
 # GSM_project
-GSMproject.....backend.....Django...
-cmder 실행 후 runserver돌려야 합니다.
+GSM Festival에서 오늘 뭐 볼까?라는 프로젝트를 만들었습니다.
