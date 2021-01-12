@@ -32,7 +32,7 @@
     </div>
     <h1 id="coinAm" class="num"> 0 </h1>
     <header>
-        <a href="{% url 'main' %}">
+        <a href="{% url 'index' %}">
             <h1>
                 <span class="team" style="color: powderblue">MOVIE</span>
                 <span class="team-name">오늘 뭐 볼까?</span>
@@ -79,12 +79,15 @@
                             <img src="{% static "images/question.png" %}" alt="">
                         </div>
                         <div class="question">Q.하루중 기분이 좋을때는?</div>
-                        <ul class="answer-container">
-                            <a href="{% url 'question2' %}" onclick="coin();"><li id="answer">새벽</li></a>
-                            <a href="{% url 'question2' %}" onclick="coin2();"><li id="answer">아침</li></a>
-                            <a href="{% url 'question2' %}" onclick="coin4();"><li id="answer">오후 또는 이른저녁</li></a>
-                            <a href="{% url 'question2' %}" onclick="coin6();"><li id="answer">늦은 밤</li></a>
-                        </ul>
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <ul class="answer-container">
+                            <a href="{% url 'question2' %}" onclick="coin();"><input type="submit" id="answer" value="새벽" name="top"></a>
+                            <a href="{% url 'question2' %}" onclick="coin2();"><input type="submit" id="answer" value="아침" name="mid"></a>
+                            <a href="{% url 'question2' %}" onclick="coin4();"><input type="submit" id="answer" value="오후또는 이른 저녁" name="mid2"></a>
+                            <a href="{% url 'question2' %}" onclick="coin6();"><input type="submit" id="answer" value="늦은밤" name="bot"></a>
+                            </ul>
+                        </form>
                     </div>
                 </div>
             </div>

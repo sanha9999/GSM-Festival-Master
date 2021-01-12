@@ -32,7 +32,7 @@
     </div>
     <h1 id="coinAm" class="num"> 0 </h1>
     <header>
-        <a href="{% url 'main' %}">
+        <a href="{% url 'index' %}">
             <h1>
                 <span class="team" style="color: powderblue">MOVIE</span>
                 <span class="team-name">오늘 뭐 볼까?</span>
@@ -68,13 +68,16 @@
                             <img src="{% static "images/color.png" %}" alt="" class="img">
                         </div>
                         <div class="question">Q.다음 중 제일 좋아하는 색은?</div>
+                        <form action="" method="POST">
+                            {% csrf_token %}
                         <ul class="answer-container">
-                            <a href="{% url 'question9' %}" onclick="coin3();"><li id="answer">빨강 또는 오렌지</li></a>
-                            <a href="{% url 'question9' %}" onclick="coin7();"><li id="answer">검은색</li></a>
-                            <a href="{% url 'question9' %}" onclick="coin5();"><li id="answer">노랑 또는 연한 파랑</li></a>
-                            <a href="{% url 'question9' %}" onclick="coin4();"><li id="answer">녹색</li></a>
-                            <a href="{% url 'question9' %}" onclick="coin2();"><li id="answer">흰색</li></a>
+                            <a href="{% url 'question9' %}" onclick="coin3();"><input type="submit" id="answer" value="빨강 또는 오렌지" name="top"></a>
+                            <a href="{% url 'question9' %}" onclick="coin7();"><input type="submit" id="answer" value="검은색" name="mid"></a>
+                            <a href="{% url 'question9' %}" onclick="coin5();"><input type="submit" id="answer" value="노랑 또는 연한 파랑" name="mid2"></a>
+                            <a href="{% url 'question9' %}" onclick="coin4();"><input type="submit" id="answer" value="녹색" name="mid3"></a>
+                            <a href="{% url 'question9' %}" onclick="coin2();"><input type="submit" id="answer" value="흰색" name="bot"></a>
                         </ul>
+                        </form>
                     </div>
                 </div>
             </div>

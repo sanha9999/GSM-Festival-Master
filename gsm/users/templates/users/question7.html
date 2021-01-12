@@ -32,7 +32,7 @@
     </div>
     <h1 id="coinAm" class="num"> 0 </h1>
     <header>
-        <a href="{% url 'main' %}">
+        <a href="{% url 'index' %}">
             <h1>
                 <span class="team" style="color: powderblue">MOVIE</span>
                 <span class="team-name">오늘 뭐 볼까?</span>
@@ -68,11 +68,14 @@
                             <img src="{% static "images/work.png" %}" alt="" class="img">
                         </div>
                         <div class="question">Q.일에 몰두하다 방해 받았을 때 나는?</div>
+                        <form action="" method="POST">
+                            {% csrf_token %}
                         <ul class="answer-container">
-                            <a href="{% url 'question8' %}" onclick="coin6();"><li id="answer">휴식의 기회를 반갑게 맞이한다.</li></a>
-                            <a href="{% url 'question8' %}" onclick="coin2();"><li id="answer">짜증을 낸다.</li></a>
-                            <a href="{% url 'question8' %}" onclick="coin4();"><li id="answer">짜증이 나지만 한편으로는 반갑다.</li></a>
+                            <a href="{% url 'question8' %}" onclick="coin6();"><input type="submit" id="answer" value="휴식의 기회를 반갑게 맞이한다." name="top"></a>
+                            <a href="{% url 'question8' %}" onclick="coin2();"><input type="submit" id="answer" value="짜증을 낸다." name="mid"></a>
+                            <a href="{% url 'question8' %}" onclick="coin4();"><input type="submit" id="answer" value="짜증이 나지만 한편으로 반갑다." name="bot"></a>
                         </ul>
+                        </form>
                     </div>
                 </div>
             </div>

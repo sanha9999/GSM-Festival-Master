@@ -1,5 +1,5 @@
 import random
-
+import pandas as pd
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .models import User
@@ -7,48 +7,241 @@ from .models import Post, Category, Tag, Comment
 from .forms import CommentForm
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from sklearn.neighbors import KNeighborsClassifier
+import joblib
+import numpy as np
+from scipy.spatial import KDTree
+from sklearn.model_selection import train_test_split
+from collections import Counter
+from sklearn import preprocessing
 
-
-
+colunm = ["openness", "agreeableness", "emotional_stability", "conscientiousness", "extraversion", "assigned metric", "assigned condition", "is_personalized", "enjoy_watching"]
+user = ["user"]
+df = pd.DataFrame(index=user, columns=colunm)
 # Create your views here.
 def question_view(request):
+
+    if request.POST.get('top'):
+        df["openness"] = 6.0
+        name = 'top'
+        print(name)
+        return redirect("question2")
+    elif request.POST.get('mid'):
+        df["openness"] = 4.5
+        name = 'mid'
+        print(name)
+        return redirect("question2")
+    elif request.POST.get('mid2'):
+        df["openness"] = 3.0
+        name = 'mid2'
+        print(name)
+        return redirect("question2")
+    elif request.POST.get('bot'):
+        df["openness"] = 2.0
+        name = 'bot'
+        print(df["openness"])
+        return redirect("question2")
     return render(request, "users/question.html")
 
 def question_view2(request):
+    if request.POST.get('top'):
+        df["agreeableness"] = 6.0
+        name = 'top'
+        print(name)
+        return redirect("question3")
+    elif request.POST.get('mid'):
+        df["agreeableness"] = 4.5
+        name = 'mid'
+        print(name)
+        return redirect("question3")
+    elif request.POST.get('mid2'):
+        df["agreeableness"] = 3.0
+        name = 'mid2'
+        print(name)
+        return redirect("question3")
+    elif request.POST.get('mid3'):
+        df["agreeableness"] = 2.0
+        name = 'mid3'
+        print(df["openness"])
+        return redirect("question3")
+    elif request.POST.get('bot'):
+        df["agreeableness"] = 1.0
+        return redirect("question3")
     return render(request, "users/question2.html")
 
 def question_view3(request):
+    if request.POST.get('top'):
+        df["emotional_stability"] = 6.0
+        name = 'top'
+        print(name)
+        return redirect("question4")
+    elif request.POST.get('mid'):
+        df["emotional_stability"] = 4.5
+        name = 'mid'
+        print(name)
+        return redirect("question4")
+    elif request.POST.get('mid2'):
+        df["emotional_stability"] = 3.0
+        name = 'mid2'
+        print(name)
+        return redirect("question4")
+    elif request.POST.get('bot'):
+        df["emotional_stability"] = 2.0
+        name = 'bot'
+        print(df["openness"])
+        return redirect("question4")
     return render(request, "users/question3.html")
 
 def question_view4(request):
+    if request.POST.get('top'):
+        df["conscientiousness"] = 6.0
+        name = 'top'
+        print(name)
+        return redirect("question5")
+    elif request.POST.get('mid'):
+        df["conscientiousness"] = 4.5
+        name = 'mid'
+        print(name)
+        return redirect("question5")
+    elif request.POST.get('mid2'):
+        df["conscientiousness"] = 3.0
+        name = 'mid2'
+        print(name)
+        return redirect("question5")
+    elif request.POST.get('bot'):
+        df["conscientiousness"] = 2.0
+        name = 'bot'
+        print(df["openness"])
+        return redirect("question5")
     return render(request, "users/question4.html")
 
 def question_view5(request):
+    if request.POST.get('top'):
+        df["extraversion"] = 6.0
+        name = 'top'
+        print(name)
+        return redirect("question6")
+    elif request.POST.get('mid'):
+        df["extraversion"] = 4.5
+        name = 'mid'
+        print(name)
+        return redirect("question6")
+    elif request.POST.get('mid2'):
+        df["extraversion"] = 3.0
+        name = 'mid2'
+        print(name)
+        return redirect("question6")
+    elif request.POST.get('bot'):
+        df["extraversion"] = 2.0
+        name = 'bot'
+        print(df["openness"])
+        return redirect("question6")
     return render(request, "users/question5.html")
 
 def question_view6(request):
+    if request.POST.get('top'):
+        df["assigned metric"] = 2
+        name = 'top'
+        print(name)
+        return redirect("question7")
+    elif request.POST.get('mid'):
+        df["assigned metric"] = 1
+        name = 'mid'
+        print(name)
+        return redirect("question7")
+    elif request.POST.get('bot'):
+        df["assigned metric"] = 0
+        name = 'bot'
+        print(name)
+        return redirect("question7")
     return render(request, "users/question6.html")
 
 def question_view7(request):
+    if request.POST.get('top'):
+        df["assigned condition"] = 3
+        name = 'top'
+        print(name)
+        return redirect("question8")
+    elif request.POST.get('mid'):
+        df["assigned condition"] = 2
+        name = 'mid'
+        print(name)
+        return redirect("question8")
+    elif request.POST.get('bot'):
+        df["assigned condition"] = 1
+        name = 'bot'
+        print(name)
+        return redirect("question8")
     return render(request, "users/question7.html")
 
 def question_view8(request):
+    if request.POST.get('top'):
+        df["is_personalized"] = 4
+        name = 'top'
+        print(name)
+        return redirect("question9")
+    elif request.POST.get('mid'):
+        df["is_personalized"] = 3
+        name = 'mid'
+        print(name)
+        return redirect("question9")
+    elif request.POST.get('mid2'):
+        df["is_personalized"] = 2
+        name = 'mid2'
+        print(name)
+        return redirect("question9")
+    elif request.POST.get('mid3'):
+        df["is_personalized"] = 1
+        name = 'mid3'
+        print(df["openness"])
+        return redirect("question9")
+    elif request.POST.get('bot'):
+        df["is_personalized"] = 0
+        return redirect("question9")
     return render(request, "users/question8.html")
 def question_view9(request):
+    if request.POST.get('top'):
+        df["enjoy_watching"] = 4
+        name = 'top'
+        print(name)
+        return redirect("question10")
+    elif request.POST.get('mid'):
+        df["enjoy_watching"] = 3
+        name = 'mid'
+        print(name)
+        return redirect("question10")
+    elif request.POST.get('mid2'):
+        df["enjoy_watching"] = 2
+        name = 'mid2'
+        print(name)
+        return redirect("question10")
+    elif request.POST.get('mid3'):
+        df["enjoy_watching"] = 1
+        name = 'mid3'
+        print(df["openness"])
+        return redirect("question10")
+    elif request.POST.get('bot'):
+        df["enjoy_watching"] = 0
+        return redirect("question10")
     return render(request, "users/question9.html")
 def question_view10(request):
     if request.method == "POST":
-        number = random.randrange(1, 6)
-        if number == 1:
-            return redirect('result1')
-        elif number == 2:
-            return redirect('result2')
-        elif number == 3:
-            return redirect('result3')
-        elif number == 4:
-            return redirect('result4')
+        neigh_model = joblib.load('users/gsmprj.pkl')
+        ans = neigh_model.predict(df)
+        ans1 = pd.Series(ans)
+        ans_val = ans1.values
+        rt = int(ans_val)
+        if rt < 2:
+            return redirect("result1")
+        elif rt < 5:
+            return redirect("result2")
+        elif rt < 7:
+            return redirect("result3")
+        elif rt < 9:
+            return redirect("result4")
         else:
-            return redirect('result5')
+            return redirect("result5")
+
     return render(request, "users/question10.html")
 
 def sign_up_view(request):
@@ -100,7 +293,8 @@ def logout_view(request):
     logout(request)
     return redirect('sign_in')
 
-
+def index_view(request):
+    return render(request, "users/index.html")
 
 
 class PostList(ListView):

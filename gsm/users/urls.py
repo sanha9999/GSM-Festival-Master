@@ -22,6 +22,7 @@ urlpatterns = [
     path("result3", views.result_view3, name='result3'),
     path("result4", views.result_view4, name='result4'),
     path("result5", views.result_view5, name='result5'),
+    path("index", views.index_view, name='index'),
 
 
     path('tag/<str:slug>/', views.PostListByTag.as_view()),

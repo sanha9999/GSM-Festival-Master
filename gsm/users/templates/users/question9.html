@@ -32,7 +32,7 @@
     </div>
     <h1 id="coinAm" class="num"> 0 </h1>
     <header>
-        <a href="{% url 'main' %}">
+        <a href="{% url 'index' %}">
             <h1>
                 <span class="team" style="color: powderblue">MOVIE</span>
                 <span class="team-name">오늘 뭐 볼까?</span>
@@ -70,13 +70,16 @@
                             <img src="{% static "images/sleep.png" %}" alt="" class="img">
                         </div>
                         <div class="question">Q.잠자리에 들어서 잠들기 전의 나는?</div>
+                        <form action="" method="POST">
+                            {% csrf_token %}
                         <ul class="answer-container">
-                            <a href="{% url 'question10' %}" onclick="coin7();"><li id="answer">몸을 똑바로 펴고 눕는다.</li></a>
-                            <a href="{% url 'question10' %}" onclick="coin6();"><li id="answer">엎드린채로 몸을 쯕 펴고 눕는다.</li></a>
-                            <a href="{% url 'question10' %}" onclick="coin4();"><li id="answer">몸을 둥글게 만채로 옆으로 눕는다.</li></a>
-                            <a href="{% url 'question10' %}" onclick="coin2();"><li id="answer">한팔을 베고 눕는다.</li></a>
-                            <a href="{% url 'question10' %}" onclick="coin();"><li id="answer">머리를 이불 밑에 넣고 눕는다.</li></a>
+                            <a href="{% url 'question10' %}" onclick="coin7();"><input type="submit" id="answer" value="몸을 똑바로 펴고 눕는다." name="top"></a>
+                            <a href="{% url 'question10' %}" onclick="coin6();"><input type="submit" id="answer" value="엎드린채로 몸을 쭉 펴고 눕는다." name="mid"></a>
+                            <a href="{% url 'question10' %}" onclick="coin4();"><input type="submit" id="answer" value="몸을 둥글게 만채로 옆으로 눕는다." name="mid2"></a>
+                            <a href="{% url 'question10' %}" onclick="coin2();"><input type="submit" id="answer" value="한팔을 베고 눕는다." name="mid3"></a>
+                            <a href="{% url 'question10' %}" onclick="coin();"><input type="submit" id="answer" value="머리를 이불 밑에 넣고 눕는다." name="bot"></a>
                         </ul>
+                        </form>
                     </div>
                 </div>
             </div>

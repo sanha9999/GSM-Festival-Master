@@ -32,7 +32,7 @@
     </div>
     <h1 id="coinAm" class="num"> 0 </h1>
     <header>
-        <a href="{% url 'main' %}">
+        <a href="{% url 'index' %}">
             <h1>
                 <span class="team" style="color: powderblue">MOVIE</span>
                 <span class="team-name">오늘 뭐 볼까?</span>
@@ -69,13 +69,16 @@
                             <img src="{% static "images/walk.png" %}" alt="" class="img">
                         </div>
                         <div class="question">Q.당신이 걸을 때는?</div>
+                        <form action="" method="POST">
+                            {% csrf_token %}
                         <ul class="answer-container">
-                            <a href="{% url 'question3' %}" onclick="coin6();"><li id="answer">보폭을 넓게 빨리 걷는다.</li></a>
-                            <a href="{% url 'question3' %}" onclick="coin4();"><li id="answer">보폭을 좁게 빨리 걷는다.</li></a>
-                            <a href="{% url 'question3' %}" onclick="coin7();"><li id="answer">정면을 바라보며 덜 빠르게 걷는다.</li></a>
-                            <a href="{% url 'question3' %}" onclick="coin2();"><li id="answer">바닥을 보며 덜 빠르게 걷는다.</li></a>
-                            <a href="{% url 'question3' %}" onclick="coin();"><li id="answer">아주 느리게 걷는다.</li></a>
+                            <a href="{% url 'question3' %}" onclick="coin6();"><input type="submit" id="answer" value="보폭을 넓게 빨리 걷는다." name="top"></a>
+                            <a href="{% url 'question3' %}" onclick="coin4();"><input type="submit" id="answer" value="보폭을 좁게 빨리 걷는다." name="mid"></a>
+                            <a href="{% url 'question3' %}" onclick="coin7();"><input type="submit" id="answer" value="정면을 바라보며 덜 빠르게 걷는다." name="mid2"></a>
+                            <a href="{% url 'question3' %}" onclick="coin2();"><input type="submit" id="answer" value="바닥을 보며 덜 빠르게 걷는다." name="mid3"></a>
+                            <a href="{% url 'question3' %}" onclick="coin();"><input type="submit" id="answer" value="아주 느리게 걷는다." name="bot"></a>
                         </ul>
+                        </form>
                     </div>
                 </div>
             </div>
